@@ -29,14 +29,24 @@ static string ingresarString(string txt)
     return str;
 }
 
+static int validarInt(string txt, int num){
+bool condicion = num>100 && num<1;
+while(condicion){
+Console.WriteLine("El numero ingresado no es valido, vuelva a ingresar");
+num = ingresarInt(txt);
+}
+return num;
+}
 static Boxeador cargarBoxeador1(){
 string pais, nombre;
 int peso, velocidadPiernas, potenciaGolpes;
 nombre = ingresarString("Ingrese el nombre del Boxeador1");
 pais = ingresarString("Ingrese la nacionalidad del Boxeador1");
 peso = ingresarInt("Ingrese el peso del Boxeador1");
-velocidadPiernas = ingresarInt("Ingrese la velocidad de piernas del Boxeador1");
-potenciaGolpes = ingresarInt("Ingrese la potencia de golpe del Boxeador1");
+velocidadPiernas = ingresarInt("Ingrese la velocidad de piernas del Boxeador1(Entre 1 y 100)");
+velocidadPiernas = validarInt("Ingrese la velocidad de piernas del Boxeador1(Entre 1 y 100)", velocidadPiernas);
+potenciaGolpes = ingresarInt("Ingrese la potencia de golpe del Boxeador1(Entre 1 y 100)");
+potenciaGolpes = validarInt("Ingrese la potencia de golpe del Boxeador1(Entre 1 y 100)" ,potenciaGolpes);
 
 Boxeador box1 = new Boxeador(nombre, pais, peso, velocidadPiernas, potenciaGolpes);
 return box1;
@@ -48,8 +58,10 @@ int peso, velocidadPiernas, potenciaGolpes;
 nombre = ingresarString("Ingrese el nombre del Boxeador2");
 pais = ingresarString("Ingrese la nacionalidad del Boxeador2");
 peso = ingresarInt("Ingrese el peso del Boxeador2");
-velocidadPiernas = ingresarInt("Ingrese la velocidad de piernas del Boxeador2");
-potenciaGolpes = ingresarInt("Ingrese la potencia de golpe del Boxeador2");
+velocidadPiernas = ingresarInt("Ingrese la velocidad de piernas del Boxeador2(Entre 1 y 100)");
+velocidadPiernas = validarInt("Ingrese la velocidad de piernas del Boxeador2(Entre 1 y 100)", velocidadPiernas);
+potenciaGolpes = ingresarInt("Ingrese la potencia de golpe del Boxeador2(Entre 1 y 100)");
+potenciaGolpes = validarInt("Ingrese la potencia de golpe del Boxeador2(Entre 1 y 100)", potenciaGolpes);
 
 Boxeador box1 = new Boxeador(nombre, pais, peso, velocidadPiernas, potenciaGolpes);
 return box1;
