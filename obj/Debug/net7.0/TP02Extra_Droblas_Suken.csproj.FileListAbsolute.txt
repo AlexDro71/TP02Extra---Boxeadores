@@ -1,0 +1,15 @@
+C:\Users\PC\TP02Extra_Droblas_Suken\bin\Debug\net7.0\TP02Extra_Droblas_Suken.exe
+C:\Users\PC\TP02Extra_Droblas_Suken\bin\Debug\net7.0\TP02Extra_Droblas_Suken.deps.json
+C:\Users\PC\TP02Extra_Droblas_Suken\bin\Debug\net7.0\TP02Extra_Droblas_Suken.runtimeconfig.json
+C:\Users\PC\TP02Extra_Droblas_Suken\bin\Debug\net7.0\TP02Extra_Droblas_Suken.dll
+C:\Users\PC\TP02Extra_Droblas_Suken\bin\Debug\net7.0\TP02Extra_Droblas_Suken.pdb
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.csproj.AssemblyReference.cache
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.AssemblyInfoInputs.cache
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.AssemblyInfo.cs
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.csproj.CoreCompileInputs.cache
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.dll
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\refint\TP02Extra_Droblas_Suken.dll
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.pdb
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\TP02Extra_Droblas_Suken.genruntimeconfig.cache
+C:\Users\PC\TP02Extra_Droblas_Suken\obj\Debug\net7.0\ref\TP02Extra_Droblas_Suken.dll
