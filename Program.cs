@@ -1,18 +1,20 @@
-﻿int op = ingresarInt("1. Cargar Datos Boxeador 1.\n2. Cargar Datos Boxeador 2.\n3. Pelar.\n4. Salir");
+﻿Boxeador box1 = new Boxeador("", "", 1, 1, 1), box2 = new Boxeador("", "", 1, 1, 1);
+int op = ingresarInt("1. Cargar Datos Boxeador 1.\n2. Cargar Datos Boxeador 2.\n3. Pelar.\n4. Salir");
 while (op != 4)
 {
     switch (op)
     {
         case 1:
-           cargarBoxeador1();
+           box1 = cargarBoxeador1();
             break;
         case 2:
-            cargarBoxeador2();
+            box2 = cargarBoxeador2();
             break;
         case 3:
-          
+          Pelea(box1, box2);
             break;
     }
+   op = ingresarInt("1. Cargar Datos Boxeador 1.\n2. Cargar Datos Boxeador 2.\n3. Pelar.\n4. Salir");
 }
 static int ingresarInt(string txt)
 {
@@ -30,11 +32,12 @@ static string ingresarString(string txt)
 }
 
 static int validarInt(string txt, int num){
-bool condicion = num>100 && num<1;
-while(condicion){
+
+ while (num < 1 || num > 100){
 Console.WriteLine("El numero ingresado no es valido, vuelva a ingresar");
 num = ingresarInt(txt);
 }
+
 return num;
 }
 static Boxeador cargarBoxeador1(){
@@ -48,8 +51,8 @@ velocidadPiernas = validarInt("Ingrese la velocidad de piernas del Boxeador1(Ent
 potenciaGolpes = ingresarInt("Ingrese la potencia de golpe del Boxeador1(Entre 1 y 100)");
 potenciaGolpes = validarInt("Ingrese la potencia de golpe del Boxeador1(Entre 1 y 100)" ,potenciaGolpes);
 
-Boxeador box1 = new Boxeador(nombre, pais, peso, velocidadPiernas, potenciaGolpes);
-return box1;
+Boxeador box = new Boxeador(nombre, pais, peso, velocidadPiernas, potenciaGolpes);
+return box;
 }
 
 static Boxeador cargarBoxeador2(){
@@ -63,6 +66,36 @@ velocidadPiernas = validarInt("Ingrese la velocidad de piernas del Boxeador2(Ent
 potenciaGolpes = ingresarInt("Ingrese la potencia de golpe del Boxeador2(Entre 1 y 100)");
 potenciaGolpes = validarInt("Ingrese la potencia de golpe del Boxeador2(Entre 1 y 100)", potenciaGolpes);
 
-Boxeador box1 = new Boxeador(nombre, pais, peso, velocidadPiernas, potenciaGolpes);
-return box1;
+Boxeador box = new Boxeador(nombre, pais, peso, velocidadPiernas, potenciaGolpes);
+return box;
+}
+
+static void Pelea(Boxeador box1, Boxeador box2){
+int skill1 = box1.obtenerSkill();
+int skill2 = box2.obtenerSkill();
+int diferencia = diffPuntos(skill1, skill2);
+string ganador;
+if(skill1>skill2){
+    ganador = box1.nombre;
+}else{
+ganador = box2.nombre;
+}
+  if(diferencia>30){
+Console.WriteLine("Gano " + ganador + " por KO");
+    }else if(diferencia<30 && diferencia>10){
+    Console.WriteLine("Gano " + ganador + " por puntos en fallo unánime");
+    }else{
+Console.WriteLine("Gano " + ganador + " por puntos en fallo dividido");
+    }
+}
+
+static int diffPuntos(int num1, int num2){
+int diff;
+if(num1>num2){
+    diff = num1 - num2;
+}else{
+    diff = num2 - num1;
+}
+
+    return diff;
 }
